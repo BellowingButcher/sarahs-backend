@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']
 CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.gitpod\.io$",]
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [    
+CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
     'https://*.gitpod.io',
 ]
@@ -150,7 +150,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ), 
+    ),
 }
 
 SIMPLE_JWT = {
