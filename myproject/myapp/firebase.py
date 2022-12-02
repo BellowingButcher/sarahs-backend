@@ -7,7 +7,7 @@ config = {
   "storageBucket": "total-time-tracker.appspot.com",
   # serviceAccount this allows us to bypass authenticating users on this end.
   # I plan to do that on the front end with a log in process
-  "serviceAccount": "path/to/serviceAccountCredentials.json",
+  # "serviceAccount": "path/to/serviceAccountCredentials.json",
 }
 
 

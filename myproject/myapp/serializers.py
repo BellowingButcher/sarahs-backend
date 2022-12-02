@@ -1,5 +1,6 @@
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
+from rest_framework import serializers
+from .models import Schedules
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
@@ -13,3 +14,8 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['is_teamleader'] = user.is_teamleader
         token['is_teammember'] = user.is_teammember
         return token
+
+class SchedulesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Schedules
+        fields = '__all__'
