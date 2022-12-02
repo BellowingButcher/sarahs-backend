@@ -5,7 +5,7 @@ config = {
   "authDomain": "total-time-tracker.firebaseapp.com",
   "databaseURL": "gs://total-time-tracker.appspot.com",
   "storageBucket": "total-time-tracker.appspot.com",
-  # seviceAccount this allows us to bypass authenticating users on this end.
+  # serviceAccount this allows us to bypass authenticating users on this end.
   # I plan to do that on the front end with a log in process
   "serviceAccount": "path/to/serviceAccountCredentials.json",
 }
