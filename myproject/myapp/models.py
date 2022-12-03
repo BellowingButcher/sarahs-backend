@@ -12,14 +12,14 @@ class CustomUser(AbstractUser):
         return self.username
 
 
-class Shedules(models.model):
+class Schedules(models.Model):
     schedule = models.URLField(default=None)
     uploaded_by = models.ForeignKey("CustomUser", on_delete=models.CASCADE)
     beginning = models.DateField(auto_now=False, auto_now_add=False,)
     end = models.DateField(auto_now=False, auto_now_add=False,)
-    status = BooleanField(default=True)
+    status = models.BooleanField(default=True)
 
 
-class UserSchedules(models.model):
-    user = models.ForeignKey(to, on_delete)
+class UserSchedules(models.Model):
+    user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
     schedule = models.ForeignKey('Schedules', on_delete=models.CASCADE)
