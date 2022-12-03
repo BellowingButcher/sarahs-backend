@@ -11,6 +11,7 @@ class ObtainTokenPairWithColorView(TokenObtainPairView):
     permission_classes = (permissions.AllowAny,)
     serializer_class = MyTokenObtainPairSerializer
 
+
 class SaveSchedule(generics.ListCreateAPIView):
     queryset = Schedules.objects.all()
     serializer_class = SchedulesSerializer
