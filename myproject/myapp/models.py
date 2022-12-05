@@ -16,7 +16,7 @@ class Schedules(models.Model):
     schedule = models.URLField(default=None)
     uploaded_by = models.ForeignKey("CustomUser", on_delete=models.CASCADE)
     beginning = models.DateField(auto_now=False, auto_now_add=False,)
-    end = models.DateField(auto_now=False, auto_now_add=False,)
+    ending = models.DateField(auto_now=False, auto_now_add=False,)
     status = models.BooleanField(default=True)
 
 

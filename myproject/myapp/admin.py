@@ -4,7 +4,6 @@ from .models import CustomUser
 
 
 class CustomUserAdmin(UserAdmin):
-    ...
     fieldsets = UserAdmin.fieldsets + (
         (None, {'fields': ('is_teamleader', 'is_teammember')}),
     )
