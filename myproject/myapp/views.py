@@ -15,4 +15,7 @@ class ObtainTokenPairWithColorView(TokenObtainPairView):
 class SaveSchedule(generics.ListCreateAPIView):
     queryset = Schedules.objects.all()
     serializer_class = SchedulesSerializer
-    permissions_classes = (permissions.AllowAny,)
+
+    # todo: override the post method to provide some extended functionality
+    # def post(self, request):
+    #     print('hello', request.user.id)

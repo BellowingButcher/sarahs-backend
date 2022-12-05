@@ -4,8 +4,7 @@ from rest_framework_simplejwt import views as jwt_views
 from .views import ObtainTokenPairWithColorView, SaveSchedule
 
 urlpatterns = [
-    path('token/obtain/', ObtainTokenPairWithColorView.as_view(),
-         name='token_create'),  # override sjwt stock token
+    path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'),  # override sjwt stock token
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('save/', SaveSchedule.as_view(), name='save_schedule')
 ]
