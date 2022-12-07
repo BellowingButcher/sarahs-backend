@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#^@gw9*^+3fo-p4pnak5&c7afbm41d)m&*1=_!4-2)v%lll$wq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']
 CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.gitpod\.io$",]
 
