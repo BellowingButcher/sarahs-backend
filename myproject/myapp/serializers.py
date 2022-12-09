@@ -26,6 +26,11 @@ class ScheduleParseAndSaveSerializer(SchedulesSerializer):
     beginning=serializers.DateTimeField(required=False)
     ending=serializers.DateTimeField(required=False)
 
+class PatchScheduleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Schedules
+        fields = '__all__'
+
     # choice_set = QuestionChoiceSerializer(many=True) ????Unsure how this would fit????
 
     #Where does validated_data come from? 

@@ -15,8 +15,8 @@ class CustomUser(AbstractUser):
 class Schedules(models.Model):
     schedule = models.URLField(default=None)
     uploaded_by = models.ForeignKey("CustomUser", on_delete=models.CASCADE)
-    beginning = models.DateTimeField(auto_now=False, auto_now_add=False,)
-    ending = models.DateTimeField(auto_now=False, auto_now_add=False,)
+    beginning = models.DateTimeField(auto_now=False, auto_now_add=False, unique=True)
+    ending = models.DateTimeField(auto_now=False, auto_now_add=False, unique=True)
     status = models.BooleanField(default=True)
 
 
