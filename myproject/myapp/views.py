@@ -70,6 +70,20 @@ class TeamMemberGraph(generics.ListCreateAPIView):
     def list(self, request):
         queryset = self.get_queryset()
         serializer = SchedulesSerializer(queryset, many=True)
-        
-        print(json.dumps(serializer.data))
+        data = []
+        obj = json.loads(json.dumps(serializer.data))
+        df= pd.read_excel(obj[0]['schedule'], header=None)
+        a = df.iloc[16,3]
+        print(a)
+        # for x in obj:
+        #     df = pd.read_excel(x['schedule'], header=None)
+
+        #     data.append(x['schedule'])
+        # print(data)
+        # for i in obj:
+        #     print(i.schedule)
+        # print(getattr(obj,'schedule'))
+        # print(obj[0]['schedule'])
+        # print (hasattr(obj,'schedule'))
+
         return Response(serializer.data)
