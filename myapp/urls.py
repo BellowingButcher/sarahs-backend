@@ -9,3 +9,4 @@ urlpatterns = [
     path('save/', SaveSchedule.as_view(), name='save_schedule'),
     path('patch/<str:pk>', PatchSchedule.as_view(), name='patch_schedule')
 ]
+
