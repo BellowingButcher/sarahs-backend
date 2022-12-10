@@ -67,6 +67,7 @@ if APPENGINE_URL:
     CORS_ALLOWED_ORIGIN_REGEXES = [
         r"^https://.*\.gitpod\.io$",
         r"^https://.*\.vercel\.app$",
+        r"^https://.*\.web\.app$",
     ]
     SECURE_SSL_REDIRECT = True
 else:
