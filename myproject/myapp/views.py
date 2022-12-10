@@ -10,6 +10,7 @@ from .firebase import storage
 import numpy as np
 import pandas as pd
 from django.utils.timezone import make_aware
+import json
 # import glob
 # from .firebase import firebase
 
@@ -62,3 +63,13 @@ class SaveSchedule(generics.ListCreateAPIView):
 class PatchSchedule(generics.RetrieveUpdateDestroyAPIView):
     queryset = Schedules.objects.all()
     serializer_class = PatchScheduleSerializer
+
+class TeamMemberGraph(generics.ListCreateAPIView):
+    queryset = Schedules.objects.all()
+    serializer_class = SchedulesSerializer
+    def list(self, request):
+        queryset = self.get_queryset()
+        serializer = SchedulesSerializer(queryset, many=True)
+        
+        print(json.dumps(serializer.data))
+        return Response(serializer.data)
