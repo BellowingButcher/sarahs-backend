@@ -27,7 +27,7 @@ class SaveSchedule(generics.ListCreateAPIView):
 
         df = pd.read_excel(request.data["schedule"], header=None)
 
-        # print(df.iloc[6,3])
+        print(df.iloc[6,2])
         data = {
             'schedule': request.data["schedule"],
             'uploaded_by': request.user.id,

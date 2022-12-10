@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 from datetime import timedelta
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-#^@gw9*^+3fo-p4pnak5&c7afbm41d)m&*1=_!4-2)v%lll$wq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', '.vercel.app',]
 CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']
 CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.gitpod\.io$",]
 
@@ -159,3 +160,7 @@ SIMPLE_JWT = {
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = ('https://total-time-tracker-frontend.vercel.app',)
